@@ -20,7 +20,7 @@
 
 ## Usage guide
 
-- git clone https://github.com/abhijitnr/MERN-STACK-TODO-APP.git
+- git clone https://github.com/Rohit-Singh-Repos/MERN-APP.git
 - cd backend
 - npm install
 - add PORT and MONGODB_URL in .env file
