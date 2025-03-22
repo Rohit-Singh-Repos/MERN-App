@@ -1,0 +1,36 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8001:80"  # Nginx will expose the React app on port 8001
+    networks:
+      - mern-network
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5000:5000"  # Express will be available on port 5000
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+    depends_on:
+      - mongo
+    networks:
+      - mern-network
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mern-network
+
+networks:
+  mern-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+
