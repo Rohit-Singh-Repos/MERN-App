@@ -7,10 +7,6 @@
 - Delete ToDo
 - Get all the ToDo
 
-## Deployed link 👇👇👇
-
-[MY TODO APP](https://abhijit-fullstack-todo-app.netlify.app/)
-
 ## Tech-Stack used
 
 - MongoDB
